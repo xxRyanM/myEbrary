@@ -6,6 +6,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const bodyParser = require('body-parser')
 
 // //mongo url connection local
 // mongoose.connect('mongodb://localhose:27017/EbraryDB')
@@ -16,22 +17,23 @@ const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))
 
-//routes folder
+// Route folders
 const indexRouter = require('./routes/index')
+const authorRouter = require('./routes/authors')
 
-//views folder and engine
+
+// Views folder and engine
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 
 app.set('layout', 'layouts/layout')
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ limit: '10mb', extended: false }))
 app.use(expressLayouts)
 app.use(express.static('public'))
 
-//hooking the routes
-app.use('/',indexRouter)
+// Hooking the routes or Using the routers
+app.use('/', indexRouter)
+app.use('/authors', authorRouter)
 
-app.listen(process.env.PORT || 3000, ()=> {
-  console.log("Server started at port 3000")
-})
+app.listen(process.env.PORT || 3000)
 

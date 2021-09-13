@@ -5,5 +5,5 @@ router.get('/', (req, res) => {
  res.render('index')
 })
 
-
+// making the router global or accessable 
 module.exports = router
