@@ -20,6 +20,7 @@ db.once('open', () => console.log('Connected to Mongoose'))
 // Route folders
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
+const bookRouter = require('./routes/books')
 
 
 // Views folder and engine
@@ -34,6 +35,7 @@ app.use(express.static('public'))
 // Hooking the routes or Using the routers
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/books', bookRouter)
 
 app.listen(process.env.PORT || 3000)
 
