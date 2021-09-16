@@ -5,9 +5,21 @@
     --darkOrange: #fb8500; 
     --lightOrange: #ffb703;
     --lightTextColor: #fff;
+
+    --btn-background-color: #8ecae6;
+    --btn-border-color: #219ebc;
+    --btn-font-color: #023047;
+    --btn-danger-background-color: #cb1b16;
+    --btn-danger-border-color: #65010c;
+    --btn-danger-font-color: #f29479;
+
     --fontExtraLarge: 4rem;
     --fontLarge: 3rem;
     --fontMedium: 2.5rem;
     --fontSmall: 1.5rem;
     --fontExtraSmall: 1rem;
+
+    --book-cover-width: 200px;
+    --book-cover-width-large: 300px;
+    --book-cover-aspect-ratio: 0.75;
 }

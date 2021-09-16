@@ -150,3 +150,77 @@ body {
     color: var(--lightTextColor);
     font-size: inherit;
 }
+
+/* Authors Section */
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.author-name {
+    font-size: var(--fontSmall);
+}
+
+/* Books Section */
+.book-cover {
+    width: var(--book-cover-width);
+    height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+}
+
+.book-cover-large {
+    --book-cover-width: var(--book-cover-width-large);
+}
+
+.book-grid {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, var(--book-cover-width));
+}
+
+.book-grid-large {
+    grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+}
+
+/* Error Message */
+.error-message {
+    color: var(--btn-danger-font-color);
+    padding: .5rem;
+}
+
+.book-details {
+    display: flex;
+}
+
+.book-details-label {
+    font-size: var(--fontExtraSmall);
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.book-details-grid {
+    margin-left: 2rem;
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+}
+
+.book-details-btn-grid {
+    display: grid;
+    justify-items: stretch;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 
+      "edit delete"
+      "author author";
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.book-details-author-button {
+    grid-area: author;
+    justify-self: stretch;
+}

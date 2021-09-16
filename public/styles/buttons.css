@@ -1,12 +1,3 @@
-:root {
-    --btn-background-color: #8ecae6;
-    --btn-border-color: #219ebc;
-    --btn-font-color: #023047;
-    --btn-danger-background-color: #cb1b16;
-    --btn-danger-border-color: #65010c;
-    --btn-danger-font-color: #f29479;
-}
-
 .btn {
     border: 1px solid var(--btn-border-color);
     border-radius: .5rem;

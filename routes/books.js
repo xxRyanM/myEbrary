@@ -10,14 +10,13 @@ const imageMimeTypes = ['image/jpg', 'image/png', 'image/gif', 'image/jpeg'] // 
 router.get('/', async (req, res) => {
     // Query/Search Command
     let query = Book.find()
-    if (req.query.title != null && req.query.title != '') {
+    if (req.query.title != null && req.query.title !== '') {
         query = query.regex('title', new RegExp(req.query.title, 'i')) // append the filter field to Book.find
     }
-    if (req.query.publishedBefore != null && req.query.publishedBefore != '') {
+    if (req.query.publishedBefore != null && req.query.publishedBefore !== '') {
         query = query.lte('publishDate', req.query.publishedBefore) // append the filter field to Book.find
-        
     }
-    if (req.query.publishedAfter != null && req.query.publishedAfter != '') {
+    if (req.query.publishedAfter != null && req.query.publishedAfter !== '') {
         query = query.gte('publishDate', req.query.publishedAfter) // append the filter field to Book.find
     }
     try {
@@ -87,7 +86,7 @@ router.put('/:id', async (req, res) => {
         book.description = req.body.description
         if (req.body.cover != null && req.body.cover !== '') {
             saveCover(book, req.body.cover)
-        }
+        }         
         await book.save()
         res.redirect(`/books/${book.id}`)
     } catch {
@@ -96,7 +95,6 @@ router.put('/:id', async (req, res) => {
         } else {
             res.redirect('/')
         }
-        
     }
 })
 
@@ -127,7 +125,6 @@ async function renderEditPage(res, book, hasError = false) {
   renderFormPage (res, book, 'edit', hasError)
 }
   
-
 async function renderFormPage(res, book, form, hasError = false) {
     try {
         const authors = await Author.find({})
@@ -147,7 +144,6 @@ async function renderFormPage(res, book, form, hasError = false) {
         res.redirect('/books')
     }
 }
-
 
 function saveCover(book, coverEncoded) {
     if (coverEncoded == null) return
