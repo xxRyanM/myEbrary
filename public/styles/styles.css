@@ -1,0 +1,152 @@
+@import 'variables.css';
+@import 'buttons.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    font-family: 'Poppins';
+    font-size: 20px;
+    color: var(--lightTextColor);
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darkBlueColor);
+}
+
+/* Header Section */
+.header-title {
+    color: var(--darkOrange);
+    text-decoration: none;
+    font-size: var(--fontMedium);
+    font-weight: 600;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.header-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    list-style: none;
+}
+
+.header-nav li a {
+    text-decoration: none;
+    color: var(--lightBlueColor);
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.header-title:hover {
+    color: var(--lightOrange);
+}
+
+.header-nav li a:hover {
+    color: var(--lightTextColor);
+}
+
+/* Body */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.inner-container {
+    margin: 0 2rem;
+}
+
+.page-header {
+    font-size: var(--fontMedium);
+    font-weight: 500;
+}
+
+/* Forms Section */
+.form-row {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.form-item:first-child {
+    margin-left: 0;
+}
+
+.form-item-no-grow {
+    flex-grow: 0;
+}
+
+.form-row-end {
+   justify-content: flex-end; 
+}
+
+.form-item > label {
+    font-size: var(--fontExtraSmall);
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+
+.form-item input, .form-item select,
+.form-item textarea {
+    height: var(--fontMedium);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid var(--mediumBlueColor);
+    background-color: var(--mediumBlueColor);
+    color: var(--lightTextColor);
+    font-size: var(--fontExtraSmall);
+    font-weight: normal;
+    font-family: 'Poppins';
+    outline: none;
+}
+
+.form-item textarea {
+    height: 100%;
+    resize: none;
+}
+
+.form-item select option {
+    background-color: var(--darkBlueColor);
+}
+
+.form-item input:focus, .form-item select:focus,
+.form-item textarea:focus {
+    border-color: var(--lightBlueColor);
+}
+
+/* Filepond Object for Cover Image */
+.filepond--root {
+    font-family: 'Poppins';
+    margin-bottom: 0;
+}
+
+.filepond--panel-root {
+    background-color: var(--mediumBlueColor);
+    border: 1px solid var(--mediumBlueColor);
+}
+
+.filepond--drop-label {
+    color: var(--lightTextColor);
+    font-size: inherit;
+}

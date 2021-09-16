@@ -17,13 +17,16 @@
     <!-- Filepond CDN script -->
     <script defer src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
     <script defer src="/javascripts/fileUpload.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
     <title>Ebrary</title>
 </head>
 <body>
-  
+  <div class="container">
     <%- include('../partials/header.ejs') %>
-    <%- include('../partials/errorMessage.ejs') %>
-    <%- body %>
-
+    <div class="inner-container">
+        <%- include('../partials/errorMessage.ejs') %>
+        <%- body %>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+:root {
+    --darkBlueColor: #023047;
+    --mediumBlueColor: #219ebc;
+    --lightBlueColor: #8ecae6;
+    --darkOrange: #fb8500; 
+    --lightOrange: #ffb703;
+    --lightTextColor: #fff;
+    --fontExtraLarge: 4rem;
+    --fontLarge: 3rem;
+    --fontMedium: 2.5rem;
+    --fontSmall: 1.5rem;
+    --fontExtraSmall: 1rem;
+}

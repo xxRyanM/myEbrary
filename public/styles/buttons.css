@@ -1,0 +1,55 @@
+:root {
+    --btn-background-color: #8ecae6;
+    --btn-border-color: #219ebc;
+    --btn-font-color: #023047;
+    --btn-danger-background-color: #cb1b16;
+    --btn-danger-border-color: #65010c;
+    --btn-danger-font-color: #f29479;
+}
+
+.btn {
+    border: 1px solid var(--btn-border-color);
+    border-radius: .5rem;
+    padding: .3rem .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Poppins';
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row > * {
+    margin-left: 1rem;
+}
+
+.btn-row > *:first-child {
+    margin-left: 0;
+}
+
+.btn-primary {
+    color: var(--btn-font-color);
+    background-color: var(--btn-background-color);
+}
+
+.btn-danger {
+    color: var(--btn-danger-font-color);
+    border:1px solid var(--btn-danger-border-color);
+    background-color: var(--btn-danger-background-color);
+}
+
+.btn-primary:hover {
+    color: var(--btn-background-color);
+    background-color: var(--btn-font-color);
+}
+
+.btn-danger:hover {
+    color: var(--btn-danger-border-color);
+    border:1px solid var(--btn-danger-background-color);
+    background-color: var(--btn-danger-font-color);
+}
